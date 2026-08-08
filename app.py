@@ -1,25 +1,53 @@
 import streamlit as st
-import google.generativeai as genai
+from google import genai
 
-genai.configure(api_key=st.secrets["GEMINI_API_KEY"])
+# Connect to Gemini
+client = genai.Client(
+    api_key=st.secrets["GEMINI_API_KEY"]
+)
 
-model = genai.GenerativeModel("gemini-2.5-flash")
+# Page
+st.set_page_config(
+    page_title="Admissions Assistant",
+    page_icon="🎓"
+)
 
 st.title("🎓 Free Admissions Assistant")
 
-question = st.text_input("Ask an admissions question")
+st.write(
+    "Ask questions about university admissions, programs, "
+    "requirements, applications, and more."
+)
+
+question = st.text_input(
+    "Ask an admissions question"
+)
 
 if question:
     prompt = f"""
 You are a helpful university admissions assistant for high school students.
 
-Question: {question}
+The student asked:
+{question}
 
-Give a concise answer and encourage checking the official university website.
+Give a clear, concise answer that is easy for a high school student
+to understand.
+
+Do not invent university requirements, deadlines, statistics, or policies.
+If you are uncertain, explicitly say that you are uncertain.
+
+Encourage the student to verify important information on the
+university's official admissions website.
 """
 
-    response = model.generate_content(prompt)
+    response = client.models.generate_content(
+        model="gemini-2.5-flash",
+        contents=prompt
+    )
 
     st.write(response.text)
 
-    st.caption("General guidance only — verify with official admissions websites.")
+    st.caption(
+        "General guidance only — always verify important information "
+        "with the official university website."
+    )
