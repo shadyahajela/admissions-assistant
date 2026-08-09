@@ -1,22 +1,24 @@
 import streamlit as st
 from google import genai
 
-# Connect to Gemini
+# Gemini client
 client = genai.Client(
     api_key=st.secrets["GEMINI_API_KEY"]
 )
 
-# Page
+# Load Waterloo knowledge base
+with open("universities/waterloo.txt", "r") as f:
+    waterloo_info = f.read()
+
 st.set_page_config(
-    page_title="Admissions Assistant",
+    page_title="Ontario Admissions Assistant",
     page_icon="🎓"
 )
 
-st.title("🎓 Free Admissions Assistant")
+st.title("🎓 Ontario Admissions Assistant")
 
 st.write(
-    "Ask questions about university admissions, programs, "
-    "requirements, applications, and more."
+    "Ask questions about Ontario university admissions."
 )
 
 question = st.text_input(
@@ -24,20 +26,25 @@ question = st.text_input(
 )
 
 if question:
-    prompt = f"""
-You are a helpful university admissions assistant for high school students.
 
-The student asked:
+    prompt = f"""
+You are an Ontario university admissions assistant.
+
+Use the official Waterloo admissions information below when answering
+questions related to the University of Waterloo.
+
+OFFICIAL WATERLOO INFORMATION:
+{waterloo_info}
+
+Student question:
 {question}
 
-Give a clear, concise answer that is easy for a high school student
-to understand.
-
-Do not invent university requirements, deadlines, statistics, or policies.
-If you are uncertain, explicitly say that you are uncertain.
-
-Encourage the student to verify important information on the
-university's official admissions website.
+Instructions:
+- Answer in plain English for a high school student.
+- If the question is about Waterloo, use the official information above.
+- Do not invent admission averages or guarantees.
+- Mention that requirements can change yearly.
+- Include the official Waterloo source link when relevant.
 """
 
     response = client.models.generate_content(
@@ -45,9 +52,9 @@ university's official admissions website.
         contents=prompt
     )
 
+    st.markdown("### Answer")
     st.write(response.text)
 
     st.caption(
-        "General guidance only — always verify important information "
-        "with the official university website."
+        "General guidance only — verify important information on the official university website."
     )
