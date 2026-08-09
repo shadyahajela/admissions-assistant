@@ -1,0 +1,70 @@
+# University of Waterloo Admissions Knowledge Base
+
+Official source: https://uwaterloo.ca/future-students/
+
+## Computer Science (Ontario applicants)
+
+Required Grade 12 U/M courses:
+
+* English (ENG4U)
+* Advanced Functions (MHF4U)
+* Calculus and Vectors (MCV4U)
+* One additional U/M mathematics course
+* Two additional U/M courses
+
+Admission is highly competitive and varies by year.
+
+Waterloo states that admission decisions are based primarily on Grade 12 U/M courses and other factors such as the Admission Information Form (AIF) where applicable.
+
+## Software Engineering
+
+Required Grade 12 U/M courses:
+
+* English (ENG4U)
+* Advanced Functions (MHF4U)
+* Calculus and Vectors (MCV4U)
+* Chemistry (SCH4U)
+* Physics (SPH4U)
+
+Supplementary application required:
+
+* Admission Information Form (AIF)
+* Online interview
+
+Software Engineering is one of Waterloo’s most competitive programs.
+
+## Computer Engineering
+
+Required Grade 12 U/M courses:
+
+* English (ENG4U)
+* Advanced Functions (MHF4U)
+* Calculus and Vectors (MCV4U)
+* Chemistry (SCH4U)
+* Physics (SPH4U)
+
+Supplementary application required:
+
+* Admission Information Form (AIF)
+
+## Mechatronics Engineering
+
+Required Grade 12 U/M courses:
+
+* English (ENG4U)
+* Advanced Functions (MHF4U)
+* Calculus and Vectors (MCV4U)
+* Chemistry (SCH4U)
+* Physics (SPH4U)
+
+Supplementary application required:
+
+* Admission Information Form (AIF)
+
+## General Waterloo admissions notes
+
+* Ontario students apply through OUAC.
+* Grade 11 marks may be used for early consideration when Grade 12 marks are not yet available.
+* Final admission decisions are primarily based on Grade 12 U/M courses.
+* Waterloo does not publish guaranteed admission cutoffs for these programs.
+* Students should always verify requirements and deadlines on the official Waterloo website because they can change from year to year.
