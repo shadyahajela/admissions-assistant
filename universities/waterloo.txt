@@ -4,13 +4,16 @@ Official source: https://uwaterloo.ca/future-students/
 
 ## Computer Science (Ontario applicants)
 
-Required Grade 12 U/M courses:
+Ontario students must present **six Grade 12 U/M courses including**:
 
-* English (ENG4U)
+* English (ENG4U or equivalent)
 * Advanced Functions (MHF4U)
 * Calculus and Vectors (MCV4U)
-* One additional U/M mathematics course
-* Two additional U/M courses
+* One other Grade 12 4U course
+
+The remaining courses may be additional Grade 12 U/M courses of your choice so that you have at least six Grade 12 U/M courses in total.
+
+Recommended: Grade 11 Introduction to Computer Science (ICS3U).
 
 Admission is highly competitive and varies by year.
 
